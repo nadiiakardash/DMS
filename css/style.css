@@ -602,7 +602,7 @@ input[type="radio"].visually-hidden {
 .gradient .main-gradient {
   background: -o-radial-gradient(67.21% 104.82%, 24.11% 128.12%, rgba(26, 28, 30, 0.73) 0%, #1A1C1E 100%);
   background: radial-gradient(24.11% 128.12% at 67.21% 104.82%, rgba(26, 28, 30, 0.73) 0%, #1A1C1E 100%);
-  margin-top: -97px;
+  margin-top: -110px;
 }
 
 .slider-button {
@@ -880,10 +880,6 @@ input[type="radio"].visually-hidden {
 
 .header {
   height: 100vh;
-  z-index: 1000;
-  top: 0;
-  left: 0;
-  right: 0;
   padding-top: 34px;
   padding-bottom: 115px;
   color: #C5C5C5;
@@ -897,7 +893,7 @@ input[type="radio"].visually-hidden {
 
 .header--closed {
   height: auto;
-  padding-top: 13px;
+  padding-top: 27px;
   padding-bottom: 0;
 }
 
@@ -1827,6 +1823,10 @@ input[type="radio"].visually-hidden {
   padding-top: 137px;
 }
 
+.services__wrapper--about {
+  width: 31%;
+}
+
 .services__list {
   padding: 0;
   margin: 0;
@@ -1858,7 +1858,7 @@ input[type="radio"].visually-hidden {
   left: 0;
   right: 0;
   z-index: 1;
-  height: 111px;
+  height: 109px;
   width: 100%;
   background-color: white;
 }
@@ -2004,6 +2004,10 @@ input[type="radio"].visually-hidden {
   padding-right: 90px;
 }
 
+.services__description--about {
+  padding-right: 0;
+}
+
 .services__picture {
   position: relative;
   z-index: 2;
@@ -2140,6 +2144,12 @@ input[type="radio"].visually-hidden {
 
 .services__background--first {
   margin-right: 11px;
+}
+
+.services__inner {
+  position: relative;
+  width: 66.2%;
+  padding-top: 36px;
 }
 
 .tab {
@@ -2547,36 +2557,6 @@ input[type="radio"].visually-hidden {
   padding-bottom: 206px;
 }
 
-.tab__map {
-  position: absolute;
-  z-index: 10;
-  right: 0;
-  top: 162px;
-  width: 47.6%;
-  height: 564px;
-  background-color: transparent;
-  background-image: url("../img/main/tab/contacts/map.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: left top;
-}
-
-.tab__map-link {
-  position: absolute;
-  bottom: 83px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
-  z-index: 10;
-  padding-right: 45px;
-  padding-left: 25px;
-}
-
-.tab__map-link::before {
-  right: 15px;
-}
-
 .tab__contacts-link {
   outline: 0;
   -webkit-transition: color 0.3s ease, opacity 0.3s ease;
@@ -2892,6 +2872,36 @@ input[type="radio"].visually-hidden {
   color: #0F135A;
 }
 
+.map {
+  position: absolute;
+  z-index: 10;
+  right: 0;
+  top: 162px;
+  width: 47.6%;
+  height: 564px;
+  background-color: transparent;
+  background-image: url("../img/main/tab/contacts/map.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left top;
+}
+
+.map__link {
+  position: absolute;
+  bottom: 83px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 10;
+  padding-right: 45px;
+  padding-left: 25px;
+}
+
+.map__link::before {
+  right: 15px;
+}
+
 .wish {
   background-color: white;
 }
@@ -2941,6 +2951,43 @@ input[type="radio"].visually-hidden {
 
 .wish__link::before {
   right: 24px;
+}
+
+.gallery {
+  overflow: visible;
+}
+
+.gallery {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  text-indent: 0;
+  list-style: none;
+}
+
+.gallery__item {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.gallery__pagination {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.gallery__buttons {
+  position: absolute;
+}
+
+.gallery__pagination {
+  display: none;
 }
 
 @media (max-width: 1920px) {
@@ -3166,6 +3213,14 @@ input[type="radio"].visually-hidden {
     line-height: 120%;
   }
 
+  .header__item {
+    margin-bottom: 25px;
+  }
+
+  .header__list--languages {
+    padding-top: 15px;
+  }
+
   .main__tab {
     padding-top: 75px;
   }
@@ -3231,21 +3286,12 @@ input[type="radio"].visually-hidden {
     margin-right: 65px;
   }
 
-  .tab__map {
-    height: 450px;
-  }
-
   .tab__contacts {
     padding-bottom: 155px;
   }
 
   .tab__slide-buttons {
     bottom: 35px;
-  }
-
-  .tab__map-link {
-    font-size: 14px;
-    line-height: 120%;
   }
 
   .tab__contacts-list {
@@ -3293,6 +3339,15 @@ input[type="radio"].visually-hidden {
 
   .slider__button-box--car {
     top: 268px;
+  }
+
+  .map {
+    height: 450px;
+  }
+
+  .map__link {
+    font-size: 14px;
+    line-height: 120%;
   }
 }
 
@@ -3780,14 +3835,6 @@ input[type="radio"].visually-hidden {
     padding-top: 430px;
   }
 
-  .tab__map {
-    top: 0;
-    right: auto;
-    left: 30px;
-    height: 400px;
-    width: 708px;
-  }
-
   .tab__list--contacts {
     padding-top: 40px;
   }
@@ -3905,6 +3952,14 @@ input[type="radio"].visually-hidden {
 
   .slider__car-title {
     font-size: 10px;
+  }
+
+  .map {
+    top: 0;
+    right: auto;
+    left: 30px;
+    height: 400px;
+    width: 708px;
   }
 
   .wish__wrapper {
@@ -4519,20 +4574,6 @@ input[type="radio"].visually-hidden {
     width: 25px;
   }
 
-  .tab__map {
-    left: 0;
-    right: 0;
-    height: 200px;
-    width: 100%;
-    padding-right: 20px;
-    padding-left: 20px;
-  }
-
-  .tab__map-link {
-    width: 280px;
-    bottom: 25px;
-  }
-
   .tab__contacts-list {
     padding-top: 0;
     margin-bottom: 0;
@@ -4682,6 +4723,20 @@ input[type="radio"].visually-hidden {
     margin-right: 0;
   }
 
+  .map {
+    left: 0;
+    right: 0;
+    height: 200px;
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .map__link {
+    width: 280px;
+    bottom: 25px;
+  }
+
   .wish__wrapper {
     width: 100%;
     padding-right: 20px;
@@ -4740,11 +4795,5 @@ input[type="radio"].visually-hidden {
     padding-right: 67px;
     background-position: right top;
     text-align: right;
-  }
-}
-
-@media (max-width: 1439px) and (min-width: 768px) and (max-width: 1199px) {
-  .tab__list {
-    height: auto !important;
   }
 }
