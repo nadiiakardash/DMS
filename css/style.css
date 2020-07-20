@@ -1725,6 +1725,25 @@ input[type="radio"].visually-hidden {
   border-bottom: 9px solid #1A1C1E;
 }
 
+.form-window__button {
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.form-window__button {
+  outline: none;
+}
+
+.form-window__button:hover,
+.form-window__button:focus {
+  opacity: 60%;
+}
+
+.form-window__button:active {
+  opacity: 30%;
+}
+
 .main__tab {
   padding-top: 103px;
   margin-top: -2px;
@@ -3190,6 +3209,7 @@ input[type="radio"].visually-hidden {
   padding-left: 18px;
   padding-bottom: 5px;
   border-bottom: 2px solid #454994;
+  cursor: pointer;
 }
 
 .form-window .new-select__list {
@@ -3359,6 +3379,9 @@ input[type="radio"].visually-hidden {
   color: #1A1C1E;
   text-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
   background-color: #FDFDFD;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
 }
 
 .form-window__button::before {
@@ -3627,6 +3650,10 @@ input[type="radio"].visually-hidden {
 
   .header__list--languages {
     padding-top: 15px;
+  }
+
+  .footer__button-up {
+    right: 170px;
   }
 
   .main__tab {
@@ -4132,6 +4159,19 @@ input[type="radio"].visually-hidden {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+  }
+
+  .footer__button-up {
+    top: -25px;
+    right: 120px;
+    width: 50px;
+    height: 50px;
+    -webkit-box-shadow: -6px -12px 12px rgba(0, 0, 0, 0.08);
+            box-shadow: -6px -12px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  .footer__button-up::before {
+    top: 13px;
   }
 
   .footer {
@@ -4662,6 +4702,8 @@ input[type="radio"].visually-hidden {
     line-height: 120%;
     padding-top: 7px;
     padding-bottom: 7px;
+    -webkit-box-shadow: -8px -12px 12px rgba(0, 0, 0, 0.08);
+            box-shadow: -8px -12px 12px rgba(0, 0, 0, 0.08);
   }
 }
 
@@ -5004,6 +5046,10 @@ input[type="radio"].visually-hidden {
 
   .footer__logo {
     width: 200px;
+  }
+
+  .footer__button-up {
+    right: 90px;
   }
 
   .main__services {
