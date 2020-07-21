@@ -2575,6 +2575,20 @@ input[type="radio"].visually-hidden {
           order: 2;
 }
 
+.tab__photo--auctions {
+  position: relative;
+}
+
+.tab__photo--auctions {
+  outline: none;
+}
+
+.tab__photo--auctions:hover .tab__link--auctions,
+.tab__photo--auctions:focus .tab__link--auctions {
+  opacity: 1;
+  visibility: visible;
+}
+
 .tab__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2657,6 +2671,28 @@ input[type="radio"].visually-hidden {
 
 .tab__link:last-child {
   margin-right: 0;
+}
+
+.tab__link--auctions {
+  position: absolute;
+  z-index: 100;
+  width: 390px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  margin: 0;
+  padding-right: 50px;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.tab__link--auctions::before {
+  right: 20px;
 }
 
 .tab__link-shadow {
@@ -5147,6 +5183,10 @@ input[type="radio"].visually-hidden {
     right: 15px;
   }
 
+  .tab__link--auctions {
+    width: 280px;
+  }
+
   .tab__button-description {
     margin-left: 10px;
     font-size: 14px;
@@ -6161,6 +6201,10 @@ input[type="radio"].visually-hidden {
 
   .tab__link--info::before {
     right: 35px;
+  }
+
+  .tab__link--auctions {
+    width: 250px;
   }
 
   .tab__button-description {
