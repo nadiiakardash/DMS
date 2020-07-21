@@ -530,6 +530,15 @@ button {
   background-color: #004fe4;
 }
 
+main {
+  position: relative;
+  z-index: 1;
+}
+
+footer {
+  z-index: 10;
+}
+
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
@@ -1935,6 +1944,11 @@ input[type="radio"].visually-hidden {
   width: 66.3%;
 }
 
+.services__gallery--auctions {
+  width: 66%;
+  padding-top: 0;
+}
+
 .services__inner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2009,6 +2023,10 @@ input[type="radio"].visually-hidden {
   z-index: 0;
 }
 
+.services__title--auctions::before {
+  width: 94%;
+}
+
 .services__title-blue {
   position: relative;
   z-index: 10;
@@ -2021,6 +2039,10 @@ input[type="radio"].visually-hidden {
   margin-bottom: 73px;
   font-weight: 600;
   color: #929292;
+}
+
+.services__description--auctions {
+  padding-right: 20px;
 }
 
 .services__link {
@@ -2088,6 +2110,21 @@ input[type="radio"].visually-hidden {
   z-index: 10;
   font-size: 14px;
   line-height: 120%;
+  color: #929292;
+}
+
+.services__pagination::before {
+  content: "";
+  position: absolute;
+  display: block;
+  left: -70px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 53px;
+  height: 1px;
+  background-color: #929292;
 }
 
 .services__pagination span::before {
@@ -2191,6 +2228,45 @@ input[type="radio"].visually-hidden {
   margin-right: 13px;
 }
 
+.auctions {
+  padding: 0;
+  margin: 0;
+  text-indent: 0;
+  list-style: none;
+}
+
+.auctions__tab {
+  margin-bottom: 150px;
+}
+
+.auctions__tab:last-child {
+  margin-bottom: 0;
+}
+
+.selection {
+  position: relative;
+  padding-top: 156px;
+  padding-bottom: 337px;
+  background-image: url("../img/main/tab/buy/background.png"), -webkit-gradient(linear, left top, left bottom, from(#121773), to(#0D1038));
+  background-image: url("../img/main/tab/buy/background.png"), -o-linear-gradient(top, #121773 0%, #0D1038 100%);
+  background-image: url("../img/main/tab/buy/background.png"), linear-gradient(180deg, #121773 0%, #0D1038 100%);
+  background-repeat: no-repeat, no-repeat;
+  background-size: 949px, cover;
+  background-position: left 403px top, left top;
+}
+
+.selection::before {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0;
+  bottom: -2px;
+  right: 0;
+  width: 100%;
+  height: 457px;
+  background-color: white;
+}
+
 .tab {
   padding: 0;
   margin: 0;
@@ -2255,6 +2331,11 @@ input[type="radio"].visually-hidden {
   background-color: #FAFAFA;
 }
 
+.tab__page--iaai {
+  right: auto;
+  left: 148px;
+}
+
 .tab__page-current {
   font-size: 16px;
 }
@@ -2308,6 +2389,13 @@ input[type="radio"].visually-hidden {
 
 .tab__pagination--contacts .tab__bullet {
   margin-right: 130px;
+}
+
+.tab__pagination--iaai {
+  right: auto;
+  left: 0;
+  padding-left: 0;
+  padding-right: 80px;
 }
 
 .tab__bullet {
@@ -2417,6 +2505,10 @@ input[type="radio"].visually-hidden {
   margin-bottom: 0;
 }
 
+.tab__description--copart {
+  width: 97%;
+}
+
 .tab__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2456,6 +2548,12 @@ input[type="radio"].visually-hidden {
   height: 564px;
 }
 
+.tab__photo--iaai {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
 .tab__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2487,6 +2585,11 @@ input[type="radio"].visually-hidden {
   padding-bottom: 83px;
   padding-top: 126px;
   padding-right: 70px;
+}
+
+.tab__wrapper--iaai {
+  padding-left: 0;
+  padding-right: 80px;
 }
 
 .tab__image {
@@ -3055,30 +3158,6 @@ input[type="radio"].visually-hidden {
   margin-bottom: 112px;
 }
 
-.main-about__selection {
-  position: relative;
-  padding-top: 156px;
-  padding-bottom: 337px;
-  background-image: url("../img/main/tab/buy/background.png"), -webkit-gradient(linear, left top, left bottom, from(#121773), to(#0D1038));
-  background-image: url("../img/main/tab/buy/background.png"), -o-linear-gradient(top, #121773 0%, #0D1038 100%);
-  background-image: url("../img/main/tab/buy/background.png"), linear-gradient(180deg, #121773 0%, #0D1038 100%);
-  background-repeat: no-repeat, no-repeat;
-  background-size: 949px, cover;
-  background-position: left 403px top, left top;
-}
-
-.main-about__selection::before {
-  content: "";
-  position: absolute;
-  display: block;
-  left: 0;
-  bottom: -2px;
-  right: 0;
-  width: 100%;
-  height: 457px;
-  background-color: white;
-}
-
 .gallery {
   position: relative;
   overflow: hidden;
@@ -3135,11 +3214,42 @@ input[type="radio"].visually-hidden {
   opacity: 50%;
 }
 
+.gallery__item--auctions {
+  position: relative;
+  opacity: 0;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.gallery__item--auctions.gallery__item--active {
+  opacity: 1;
+}
+
 .gallery__picture {
   margin-top: 0;
   margin-bottom: 0;
   width: 100%;
   height: 443px;
+}
+
+.gallery__picture--auctions {
+  position: absolute;
+  left: 47px;
+  top: 53px;
+  height: 804px;
+}
+
+.gallery__picture--auctions::before {
+  content: "";
+  position: absolute;
+  display: block;
+  right: 0;
+  bottom: 150px;
+  z-index: 10;
+  width: 100%;
+  height: 130px;
+  background-color: white;
 }
 
 .gallery__photo {
@@ -3151,8 +3261,55 @@ input[type="radio"].visually-hidden {
   font-family: "object-fit: cover";
 }
 
+.gallery__photo--auctions {
+  -o-object-fit: contain;
+     object-fit: contain;
+  font-family: "object-fit: contain";
+}
+
 .gallery__pagination {
   display: none;
+}
+
+.gallery__pagination--auctions {
+  position: absolute;
+  top: 240px;
+  right: 135px;
+  display: inline-block;
+  z-index: 10;
+  font-size: 14px;
+  color: #929292;
+  line-height: 120%;
+}
+
+.gallery__pagination--auctions::before {
+  content: "";
+  position: absolute;
+  display: block;
+  left: -70px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 53px;
+  height: 1px;
+  background-color: #929292;
+}
+
+.gallery__pagination--auctions span::before {
+  content: '0';
+  display: inline-block;
+}
+
+.gallery__current {
+  display: inline-block;
+  margin-right: -4px;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.gallery__total {
+  margin-left: -2px;
 }
 
 .gallery__buttons {
@@ -3407,6 +3564,14 @@ input[type="radio"].visually-hidden {
   border-left: 9px solid #1A1C1E;
 }
 
+.main-auctions__services {
+  margin-bottom: 63px;
+}
+
+.main-auctions__container {
+  margin-bottom: 116px;
+}
+
 @media (max-width: 1599px) {
   .main__slider {
     padding-top: 50px;
@@ -3476,6 +3641,14 @@ input[type="radio"].visually-hidden {
     right: 30px;
   }
 
+  .selection {
+    padding-bottom: 150px;
+  }
+
+  .selection::before {
+    height: 274px;
+  }
+
   .tab__pagination {
     font-size: 14px;
     line-height: 120%;
@@ -3525,16 +3698,24 @@ input[type="radio"].visually-hidden {
     margin-bottom: 75px;
   }
 
-  .main-about__selection {
-    padding-bottom: 150px;
-  }
-
-  .main-about__selection::before {
-    height: 274px;
-  }
-
   .gallery__picture {
     height: 325px;
+  }
+
+  .gallery__picture--auctions {
+    top: 69px;
+    height: 600px;
+    left: 79px;
+  }
+
+  .gallery__picture--auctions::before {
+    height: 110px;
+    bottom: 100px;
+  }
+
+  .gallery__pagination--auctions {
+    top: 175px;
+    right: 100px;
   }
 
   .form-window {
@@ -3558,6 +3739,14 @@ input[type="radio"].visually-hidden {
 
   .form-window__wishes {
     margin-bottom: 50px;
+  }
+
+  .main-about__auctions {
+    padding-bottom: 150px;
+  }
+
+  .main-about__auctions::before {
+    height: 274px;
   }
 }
 
@@ -3752,6 +3941,20 @@ input[type="radio"].visually-hidden {
     right: 35px;
   }
 
+  .auctions__tab {
+    margin-bottom: 100px;
+  }
+
+  .selection {
+    padding-top: 45px;
+    padding-bottom: 0;
+    margin-bottom: 80px;
+  }
+
+  .selection::before {
+    height: 45px;
+  }
+
   .tab__pagination {
     top: 0;
     padding-left: 40px;
@@ -3832,6 +4035,7 @@ input[type="radio"].visually-hidden {
   }
 
   .tab__page {
+    right: 100px;
     font-size: 14px;
     line-height: 120%;
   }
@@ -3895,22 +4099,23 @@ input[type="radio"].visually-hidden {
     margin-bottom: 85px;
   }
 
-  .main-about__selection {
-    padding-top: 45px;
-    padding-bottom: 0;
-    margin-bottom: 80px;
-  }
-
-  .main-about__selection::before {
-    height: 45px;
-  }
-
   .main-about__slider {
     margin-bottom: 25px;
   }
 
   .gallery__picture {
     height: 300px;
+  }
+
+  .gallery__picture--auctions {
+    top: 75px;
+    left: 80px;
+    height: 550px;
+  }
+
+  .gallery__picture--auctions::before {
+    height: 110px;
+    bottom: 81px;
   }
 
   .gallery__buttons {
@@ -3985,6 +4190,14 @@ input[type="radio"].visually-hidden {
   .form-window__wishes {
     min-height: auto;
     margin-bottom: 40px;
+  }
+
+  .main-auctions__services {
+    margin-bottom: 45px;
+  }
+
+  .main-auctions__container {
+    margin-bottom: 80px;
   }
 }
 
@@ -4351,6 +4564,11 @@ input[type="radio"].visually-hidden {
     font-size: 10px;
   }
 
+  .services__pagination::before {
+    left: -30px;
+    width: 25px;
+  }
+
   .services__current {
     font-size: 16px;
   }
@@ -4359,8 +4577,24 @@ input[type="radio"].visually-hidden {
     padding-top: 125px;
   }
 
+  .services__gallery--auctions {
+    padding-top: 0;
+  }
+
   .services__inner {
     padding-top: 22px;
+  }
+
+  .auctions__tab {
+    margin-bottom: 50px;
+  }
+
+  .selection {
+    margin-bottom: 55px;
+  }
+
+  .selection::before {
+    height: 523px;
   }
 
   .tab--selection {
@@ -4380,6 +4614,17 @@ input[type="radio"].visually-hidden {
             order: -1;
   }
 
+  .tab__photo--iaai {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
   .tab__wrapper {
     width: 100%;
     padding-top: 0;
@@ -4392,6 +4637,11 @@ input[type="radio"].visually-hidden {
     top: 10px;
     font-size: 14px;
     line-height: 120%;
+  }
+
+  .tab__page--iaai {
+    left: auto;
+    right: 15px;
   }
 
   .tab__page-current {
@@ -4644,14 +4894,6 @@ input[type="radio"].visually-hidden {
     margin-bottom: 0;
   }
 
-  .main-about__selection {
-    margin-bottom: 55px;
-  }
-
-  .main-about__selection::before {
-    height: 523px;
-  }
-
   .gallery__button {
     width: 40px;
     height: 40px;
@@ -4684,6 +4926,33 @@ input[type="radio"].visually-hidden {
     height: 169px;
   }
 
+  .gallery__picture--auctions {
+    top: 15px;
+    left: 43px;
+    height: 450px;
+    width: 425px;
+  }
+
+  .gallery__picture--auctions::before {
+    height: 90px;
+    bottom: 81px;
+  }
+
+  .gallery__pagination {
+    top: 130px;
+    right: 50px;
+    font-size: 10px;
+  }
+
+  .gallery__pagination::before {
+    left: -30px;
+    width: 25px;
+  }
+
+  .gallery__current {
+    font-size: 16px;
+  }
+
   .form-window {
     width: 100%;
     font-size: 14px;
@@ -4704,6 +4973,14 @@ input[type="radio"].visually-hidden {
     padding-bottom: 7px;
     -webkit-box-shadow: -8px -12px 12px rgba(0, 0, 0, 0.08);
             box-shadow: -8px -12px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  .main-auctions__services {
+    margin-bottom: 30px;
+  }
+
+  .main-auctions__container {
+    margin-bottom: 50px;
   }
 }
 
@@ -5102,6 +5379,10 @@ input[type="radio"].visually-hidden {
     height: 31px;
   }
 
+  .services--auctions::before {
+    height: 70px;
+  }
+
   .services__container {
     padding-right: 0;
   }
@@ -5232,6 +5513,10 @@ input[type="radio"].visually-hidden {
             transform: translateX(-50%);
   }
 
+  .services__pagination::before {
+    display: none;
+  }
+
   .services__bullet {
     display: inline-block;
     width: 16px;
@@ -5271,9 +5556,21 @@ input[type="radio"].visually-hidden {
     padding-top: 0;
   }
 
-  .services__list {
+  .services__list--gallery {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+
+  .auctions__tab {
+    margin-bottom: 25px;
+  }
+
+  .selection {
+    padding-top: 15px;
+  }
+
+  .selection::before {
+    height: 466px;
   }
 
   .tab {
@@ -5311,6 +5608,10 @@ input[type="radio"].visually-hidden {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+
+  .tab__button-box--padding {
+    padding-bottom: 25px;
   }
 
   .tab__link {
@@ -5568,14 +5869,6 @@ input[type="radio"].visually-hidden {
     margin-bottom: 20px;
   }
 
-  .main-about__selection {
-    padding-top: 15px;
-  }
-
-  .main-about__selection::before {
-    height: 466px;
-  }
-
   .tab__description {
     width: 100%;
   }
@@ -5601,6 +5894,17 @@ input[type="radio"].visually-hidden {
     height: 126px;
   }
 
+  .gallery__picture--auctions {
+    position: static;
+    width: 100%;
+    height: 208px;
+  }
+
+  .gallery__picture--auctions::before {
+    bottom: 0;
+    height: 70px;
+  }
+
   .gallery__buttons {
     display: none;
   }
@@ -5620,8 +5924,27 @@ input[type="radio"].visually-hidden {
         align-self: flex-start;
   }
 
+  .gallery__pagination::before {
+    display: none;
+  }
+
+  .gallery__pagination--auctions {
+    position: absolute;
+    bottom: 35px;
+    top: auto;
+    left: 0;
+  }
+
+  .gallery__pagination--auctions span::before {
+    content: '';
+  }
+
   .gallery__list {
     margin-bottom: 15px;
+  }
+
+  .gallery__list--auctions {
+    margin-bottom: 0;
   }
 
   .gallery__bullet {
@@ -5704,6 +6027,14 @@ input[type="radio"].visually-hidden {
   .form-window__wishes {
     min-height: 55px;
     margin-bottom: 25px;
+  }
+
+  .main-auctions__services {
+    margin-bottom: 0;
+  }
+
+  .main-auctions__container {
+    margin-bottom: 20px;
   }
 }
 
