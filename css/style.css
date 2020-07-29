@@ -478,6 +478,10 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
+footer {
+  overflow: hidden;
+}
+
 .main-body--closed {
   overflow: hidden;
 }
@@ -3868,6 +3872,10 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   z-index: 10;
 }
 
+.services__title-blue--car {
+  font-size: 77px;
+}
+
 .services__description {
   margin-top: 0;
   margin-bottom: 0;
@@ -3905,7 +3913,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   padding-left: 55px;
   background-image: url("../img/svg/services/calc.svg");
   background-position: left 15px center;
-  background-size: 34px;
+  background-size: 26px;
 }
 
 .services__link--calc::before {
@@ -6348,6 +6356,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 }
 
 .car__photo {
+  display: block;
   margin-top: 0;
   margin-bottom: 0;
   width: 100%;
@@ -6978,6 +6987,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   padding-bottom: 2px;
   border-bottom: 1px solid #1A1C1E;
   color: #1A1C1E;
+  background-color: transparent;
 }
 
 .personal-area__input::-webkit-input-placeholder {
@@ -7096,6 +7106,40 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   color: #1A1C1E;
   border: 1px solid #1A1C1E;
   border-radius: 4px;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.personal-area__button::before,
+.personal-area__button::after {
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.personal-area__button {
+  outline: none;
+}
+
+.personal-area__button:hover,
+.personal-area__button:focus {
+  color: #191E74;
+  -webkit-transform: scale(0.99);
+      -ms-transform: scale(0.99);
+          transform: scale(0.99);
+}
+
+.personal-area__button:hover::after,
+.personal-area__button:focus::after {
+  border-left-color: #191E74;
+}
+
+.personal-area__button:active {
+  opacity: 30%;
+  -webkit-transform: scale(0.98);
+      -ms-transform: scale(0.98);
+          transform: scale(0.98);
 }
 
 .personal-area__button::before {
