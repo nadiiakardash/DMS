@@ -6649,6 +6649,10 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   min-height: 725px;
 }
 
+.personal-area__item--moto .personal-area__select-container--year:last-of-type {
+  margin-bottom: 167px !important;
+}
+
 .personal-area__title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7063,6 +7067,10 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   width: 48%;
 }
 
+.personal-area__input--number {
+  margin-bottom: 262px;
+}
+
 .personal-area__label {
   display: inline-block;
   font-weight: 600;
@@ -7397,6 +7405,10 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   margin-bottom: 62px;
 }
 
+.personal-area__form-inner--hybrid {
+  margin-bottom: 357px;
+}
+
 .personal-area__new-select,
 .personal-area__select-item {
   padding-right: 17px;
@@ -7517,6 +7529,18 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 
 .personal-area__cell--price {
   padding-right: 75px;
+}
+
+.personal-area__number-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
 }
 
 .personal-area-white {
@@ -9019,6 +9043,10 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
     min-height: 450px;
   }
 
+  .personal-area__item--moto .personal-area__select-container--year:last-of-type {
+    margin-bottom: 133px !important;
+  }
+
   .personal-area__title {
     font-size: 35px;
     line-height: 120%;
@@ -9044,20 +9072,28 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
     margin-bottom: 50px;
   }
 
-  .personal-area__input--cost::-webkit-input-placeholder {
+  .personal-area__input--cost::-webkit-input-placeholder,
+  .personal-area__input--number::-webkit-input-placeholder {
     font-size: 14px;
   }
 
-  .personal-area__input--cost:-moz-placeholder {
+  .personal-area__input--cost:-moz-placeholder,
+  .personal-area__input--number:-moz-placeholder {
     font-size: 14px;
   }
 
-  .personal-area__input--cost::-moz-placeholder {
+  .personal-area__input--cost::-moz-placeholder,
+  .personal-area__input--number::-moz-placeholder {
     font-size: 14px;
   }
 
-  .personal-area__input--cost:-ms-input-placeholder {
+  .personal-area__input--cost:-ms-input-placeholder,
+  .personal-area__input--number:-ms-input-placeholder {
     font-size: 14px;
+  }
+
+  .personal-area__input--number {
+    margin-bottom: 210px;
   }
 
   .personal-area__label {
@@ -9116,6 +9152,10 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 
   .personal-area__form-inner {
     margin-bottom: 45px;
+  }
+
+  .personal-area__form-inner--hybrid {
+    margin-bottom: 289px;
   }
 
   .personal-area__inner--tarrifs {
@@ -10309,6 +10349,10 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   .personal-area__item--calculator {
     padding-right: 30px;
     padding-left: 30px;
+  }
+
+  .personal-area__item--moto .personal-area__select-container--year:last-of-type {
+    margin-bottom: 30px !important;
   }
 
   .personal-area__input {
@@ -11993,6 +12037,10 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
     transition: 0.3s ease-in-out;
   }
 
+  .personal-area__item--moto .personal-area__select-container--year:last-of-type {
+    margin-bottom: 25px !important;
+  }
+
   .personal-area__inner,
   .personal-area__form {
     -ms-flex-item-align: start;
@@ -12033,6 +12081,10 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 
   .personal-area__input--cost {
     width: 100%;
+    margin-bottom: 25px;
+  }
+
+  .personal-area__input--number {
     margin-bottom: 25px;
   }
 
