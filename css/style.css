@@ -3650,8 +3650,11 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   position: relative;
   margin-top: -111px;
   text-transform: uppercase;
-  background: -o-radial-gradient(67.21% 104.82%, 24.11% 128.12%, rgba(26, 28, 30, 0.73) 0%, #1A1C1E 100%);
-  background: radial-gradient(24.11% 128.12% at 67.21% 104.82%, rgba(26, 28, 30, 0.73) 0%, #1A1C1E 100%);
+  background-image: url("../img/main/404/background.png"), -o-radial-gradient(67.21% 104.82%, 24.11% 128.12%, rgba(26, 28, 30, 0.73) 0%, #1A1C1E 100%);
+  background-image: url("../img/main/404/background.png"), radial-gradient(24.11% 128.12% at 67.21% 104.82%, rgba(26, 28, 30, 0.73) 0%, #1A1C1E 100%);
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, 100%;
+  background-position: 0 0, 0 0;
 }
 
 .services {
@@ -3689,6 +3692,14 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   width: 100%;
   height: 110px;
   background-color: white;
+}
+
+.services--error {
+  padding-bottom: 30px;
+}
+
+.services--error::before {
+  display: none;
 }
 
 .services__wrapper {
@@ -3771,6 +3782,14 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   width: 56%;
 }
 
+.services__item--error {
+  padding-top: 160px;
+}
+
+.services__item--error::before {
+  display: none;
+}
+
 .services__gallery {
   padding-top: 134px;
   width: 66.3%;
@@ -3799,6 +3818,10 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 
 .services__inner--gallery {
   width: 100%;
+}
+
+.services__inner--error {
+  width: 88%;
 }
 
 .services__name {
@@ -3867,6 +3890,14 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   width: 41.5%;
 }
 
+.services__title--error {
+  margin-bottom: 53px;
+}
+
+.services__title--error::before {
+  display: none;
+}
+
 .services__title-blue {
   position: relative;
   z-index: 10;
@@ -3891,6 +3922,10 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 
 .services__description--car {
   padding-right: 435px;
+}
+
+.services__description--error {
+  margin-bottom: 47px;
 }
 
 .services__link {
@@ -3930,6 +3965,17 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 
 .services__link--track::before {
   right: 55px;
+}
+
+.services__link--error {
+  padding-left: 20px;
+  padding-right: 142px;
+  text-align: right;
+  min-width: 390px;
+}
+
+.services__link--error::before {
+  right: 108px;
 }
 
 .services__picture {
@@ -6433,6 +6479,13 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   border-bottom: 1px solid #C5C5C5;
 }
 
+.pagination--personal-area {
+  max-width: 100%;
+  width: 100%;
+  padding-right: 0;
+  padding-left: 0;
+}
+
 .pagination__show-more {
   margin-top: 0;
   margin-bottom: 0;
@@ -6651,6 +6704,11 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 
 .personal-area__item--moto .personal-area__select-container--year:last-of-type {
   margin-bottom: 167px !important;
+}
+
+.personal-area__item--track {
+  padding-top: 140px;
+  padding-right: 55px;
 }
 
 .personal-area__title {
@@ -6960,9 +7018,6 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-top: 88px;
-  padding-right: 10px;
-  margin-left: auto;
 }
 
 .personal-area__inner--calculator {
@@ -6977,6 +7032,11 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   margin-top: 97px;
   margin-right: 45px;
   background-color: #EFEFEF;
+}
+
+.personal-area__inner--location {
+  width: 50%;
+  padding-top: 0;
 }
 
 .personal-area__input {
@@ -7086,6 +7146,12 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   color: #929292;
 }
 
+.personal-area__button-box {
+  width: 39%;
+  padding-top: 61px;
+  margin-bottom: 7%;
+}
+
 .personal-area__button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7114,6 +7180,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   color: #1A1C1E;
   border: 1px solid #1A1C1E;
   border-radius: 4px;
+  cursor: pointer;
   -webkit-transition: 0.3s ease-in-out;
   -o-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
@@ -7178,6 +7245,12 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   background-image: url("../img/svg/services/track.svg");
   background-size: 21px;
   margin-right: 9px;
+}
+
+.personal-area__button--photo::before {
+  background-image: url("../img/svg/personal-area/photo.svg");
+  background-size: 28px;
+  margin-right: 20px;
 }
 
 .personal-area__button--calculator {
@@ -7541,6 +7614,259 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
+}
+
+.personal-area__car-list {
+  padding: 0;
+  margin: 0;
+  text-indent: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.personal-area__car-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 48%;
+  margin-bottom: 3.1%;
+}
+
+.personal-area__car-photo-box {
+  width: 40%;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 144%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.personal-area__car-status-list {
+  padding: 0;
+  margin: 0;
+  text-indent: 0;
+  list-style: none;
+  width: 58%;
+}
+
+.personal-area__car-photo {
+  height: 290px;
+  margin-bottom: 7%;
+}
+
+.personal-area__car-image {
+  height: 100%;
+  max-height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  font-family: "object-fit: cover";
+}
+
+.personal-area__car-description,
+.personal-area__car-price,
+.personal-area__car-title,
+.personal-area__car-status-description {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.personal-area__car-description {
+  margin-bottom: 6%;
+}
+
+.personal-area__car-price {
+  color: #191E74;
+}
+
+.personal-area__car-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30%;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 187%;
+  letter-spacing: 0.05em;
+}
+
+.personal-area__car-title--document {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.personal-area__car-status-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 75px;
+  padding-top: 6%;
+  padding-bottom: 6%;
+  padding-left: 3%;
+  margin-bottom: 3%;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 187%;
+  letter-spacing: 0.05em;
+  background-color: #EFEFEF;
+}
+
+.personal-area__car-status-item:last-of-type {
+  margin-bottom: 0;
+}
+
+.personal-area__car-status-item--main {
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+.personal-area__car-status-item--wait {
+  background-color: #D8BAFF;
+}
+
+.personal-area__car-status-item--admission {
+  background-color: #BABDFF;
+}
+
+.personal-area__car-status-item--loaded {
+  background-color: #BFBFBF;
+}
+
+.personal-area__car-status-item--delivered {
+  background-color: #BCF7A0;
+}
+
+.personal-area__car-status-item--document {
+  padding-bottom: 9%;
+}
+
+.personal-area__car-status-description {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 63.5%;
+}
+
+.personal-area__car-status-description::before {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 5;
+  width: 19px;
+  height: 19px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.personal-area__car-status-description--code {
+  padding-right: 70px;
+  font-size: 16px;
+  color: #1A1C1E;
+}
+
+.personal-area__car-status-description--code::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 45px;
+  background-image: url("../img/svg/personal-area/code.svg");
+  background-position: 0 0;
+}
+
+.personal-area__car-status-description--main {
+  padding-right: 3%;
+  padding-left: 9%;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 162%;
+  letter-spacing: 0.05em;
+  text-transform: none;
+}
+
+.personal-area__car-status-description--main::before {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0;
+  background-position: 0 0;
+}
+
+.personal-area__car-status-description--wait::before {
+  background-image: url("../img/svg/personal-area/clock.svg");
+}
+
+.personal-area__car-status-description--admission::before {
+  background-image: url("../img/svg/personal-area/admiss.svg");
+}
+
+.personal-area__car-status-description--loaded::before {
+  background-image: url("../img/svg/personal-area/loaded.svg");
+}
+
+.personal-area__car-status-description--delivered::before {
+  background-image: url("../img/svg/personal-area/delivered.svg");
+}
+
+.personal-area__car-download {
+  display: block;
+  width: 100%;
+  color: #191E74;
+  text-transform: none;
+  padding-right: 19%;
+  margin-bottom: 6.5%;
+}
+
+.personal-area__car-download:last-of-type {
+  margin-bottom: 0;
+}
+
+.personal-area__car-download::after {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-left: 10%;
+  background-image: url("../img/svg/personal-area/download.svg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  -webkit-transform: translateY(2px);
+      -ms-transform: translateY(2px);
+          transform: translateY(2px);
 }
 
 .personal-area-white {
@@ -7999,6 +8325,10 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 
 .modal-email__list {
   margin-bottom: 75px;
+}
+
+.main-error + .footer .footer__button-up {
+  display: none;
 }
 
 .car-slider {
@@ -8490,6 +8820,22 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 
   .personal-area__track-box:not(:last-of-type) {
     margin-bottom: 57px;
+  }
+
+  .personal-area__car-photo {
+    height: 236px;
+  }
+
+  .personal-area__car-photo-box {
+    font-size: 14px;
+  }
+
+  .personal-area__car-title {
+    font-size: 12px;
+  }
+
+  .personal-area__car-status-description {
+    font-size: 12px;
   }
 
   .main-car-slider__socials-link {
@@ -9347,6 +9693,37 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
     bottom: 27px;
   }
 
+  .personal-area__car-photo {
+    height: 195px;
+  }
+
+  .personal-area__car-photo-box {
+    font-size: 12px;
+  }
+
+  .personal-area__car-title {
+    font-size: 10px;
+  }
+
+  .personal-area__car-status-description {
+    font-size: 10px;
+  }
+
+  .personal-area__car-status-description::before {
+    right: 30px;
+    width: 14px;
+    height: 14px;
+  }
+
+  .personal-area__car-status-description--code {
+    padding-right: 40px;
+  }
+
+  .personal-area__car-download::after {
+    width: 14px;
+    height: 14px;
+  }
+
   .personal-area-white::after {
     height: 400px;
   }
@@ -9792,6 +10169,17 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 
   .services__link--calc::before {
     right: 0;
+  }
+
+  .services__link--error {
+    padding-left: 15px;
+    padding-right: 90px;
+    text-align: right;
+    min-width: 260px;
+  }
+
+  .services__link--error::before {
+    right: 60px;
   }
 
   .services__numbers {
@@ -10524,6 +10912,8 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   }
 
   .personal-area__item {
+    padding-top: 0;
+    padding-right: 30px;
     padding-left: 30px;
     min-height: 300px;
   }
@@ -10595,7 +10985,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   }
 
   .personal-area__button {
-    font-size: 14px;
+    font-size: 10px;
   }
 
   .personal-area__button::before {
@@ -10610,6 +11000,12 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
     border: 7px solid transparent;
     border-left: 7px solid #1A1C1E;
     margin-left: 15px;
+  }
+
+  .personal-area__button::before {
+    width: 18px;
+    height: 18px;
+    background-size: contain;
   }
 
   .personal-area__button--car::before {
@@ -10722,6 +11118,31 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 
   .personal-area__select-container:last-of-type:not(.personal-area__select-container--currency) {
     margin-bottom: 40px;
+  }
+
+  .personal-area__car-item {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .personal-area__car-photo {
+    height: 252px;
+  }
+
+  .personal-area__car-photo-box {
+    font-size: 16px;
+  }
+
+  .personal-area__car-title {
+    font-size: 14px;
+  }
+
+  .personal-area__car-status-description {
+    font-size: 14px;
+  }
+
+  .personal-area-white::after {
+    display: none;
   }
 
   .personal-area-white {
@@ -11322,7 +11743,15 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
     display: none;
   }
 
+  .services__item--error {
+    width: 100%;
+  }
+
   .services__inner {
+    width: 100%;
+  }
+
+  .services__inner--error {
     width: 100%;
   }
 
@@ -11337,6 +11766,18 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   .services__link {
     width: 100%;
     font-size: 13px;
+  }
+
+  .services__link--error {
+    width: auto;
+    padding-left: 15px;
+    padding-right: 90px;
+    text-align: right;
+    min-width: 260px;
+  }
+
+  .services__link--error::before {
+    right: 60px;
   }
 
   .services__numbers {
@@ -12111,6 +12552,12 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
     padding-left: 20px;
   }
 
+  .pagination--personal-area {
+    padding-right: 0;
+    padding-left: 0;
+    font-size: 12px;
+  }
+
   .pagination__wrapper {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -12239,6 +12686,10 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
         align-self: flex-start;
     width: 100%;
     padding-top: 15px;
+  }
+
+  .personal-area__inner {
+    padding-right: 0;
   }
 
   .personal-area__inner--tarrifs {
@@ -12389,6 +12840,71 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   .personal-area__cell--foot::after,
   .personal-area__cell--head::after {
     bottom: 5px;
+  }
+
+  .personal-area__button-box {
+    width: 100%;
+    padding-top: 20px;
+  }
+
+  .personal-area__car-photo-box,
+  .personal-area__car-status-list {
+    width: 100%;
+  }
+
+  .personal-area__car-item {
+    margin-bottom: 20px;
+  }
+
+  .personal-area__car-photo {
+    height: 260px;
+  }
+
+  .personal-area__car-photo-box {
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+
+  .personal-area__car-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 12px;
+  }
+
+  .personal-area__car-status-description {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-right: 45px;
+    padding-left: 45px;
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .personal-area__car-status-description::before {
+    left: 15px;
+  }
+
+  .personal-area__car-status-item {
+    padding-left: 0;
+  }
+
+  .personal-area__car-status-item--document .personal-area__car-status-description {
+    padding-right: 15px;
+    padding-left: 15px;
   }
 
   .personal-area-white {
