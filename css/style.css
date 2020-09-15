@@ -5333,7 +5333,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 
 .map {
   position: absolute;
-  z-index: 10;
+  z-index: 1000;
   right: 0;
   top: 162px;
   width: 47.6%;
@@ -7833,6 +7833,7 @@ ol.attention__list .attention__text::before {
   padding-right: 70px;
   font-size: 16px;
   color: #1A1C1E;
+  cursor: pointer;
 }
 
 .personal-area__car-status-description--code::before {
@@ -8442,14 +8443,60 @@ ol.attention__list .attention__text::before {
   font-family: "object-fit: cover";
 }
 
-.car-slider__bullet-image {
+.car-slider__thumbs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  text-indent: 0;
+  list-style: none;
+}
+
+.car-slider__thumbs-image {
   height: 100%;
   max-height: 100%;
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  font-family: "object-fit: cover";
 }
 
 .car-slider__item {
   height: 504px;
+}
+
+.car-slider__thumbs-item {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 15%;
+  height: 94px;
+  margin-bottom: 20px;
+  background-color: #FAFAFA;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.car-slider__thumbs-item--active {
+  position: relative;
+  background-color: transparent;
+  opacity: 1;
+  cursor: default;
+}
+
+.car-slider__thumbs-item--active::after {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: -12px;
+  z-index: 100;
+  width: 40px;
+  height: 2px;
+  background-color: #232527;
 }
 
 .car-slider__buttons {
@@ -8531,43 +8578,6 @@ ol.attention__list .attention__text::before {
 
 .car-slider__list {
   margin-bottom: 15px;
-}
-
-.car-slider__bullet-image {
-  -o-object-fit: cover;
-     object-fit: cover;
-  font-family: "object-fit: cover";
-}
-
-.car-slider__bullet {
-  width: 15%;
-  height: 94px;
-  margin-bottom: 20px;
-  background-color: #FAFAFA;
-  opacity: 0.5;
-  cursor: pointer;
-}
-
-.car-slider__bullet--active {
-  position: relative;
-  background-color: transparent;
-  opacity: 1;
-  cursor: default;
-}
-
-.car-slider__bullet--active::after {
-  content: "";
-  position: absolute;
-  display: block;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
-  bottom: -12px;
-  z-index: 100;
-  width: 40px;
-  height: 2px;
-  background-color: #232527;
 }
 
 .main-single-page__attention {
@@ -8963,13 +8973,13 @@ ol.attention__list .attention__text::before {
     padding-left: 20px;
   }
 
-  .car-slider__bullet {
+  .car-slider__thumbs-item {
     height: 89px;
     margin-bottom: 0;
     padding-bottom: 10px;
   }
 
-  .car-slider__bullet--active::after {
+  .car-slider__thumbs-item--active::after {
     bottom: 0;
   }
 }
@@ -9866,12 +9876,15 @@ ol.attention__list .attention__text::before {
     height: 338px;
   }
 
-  .car-slider__bullet {
+  .car-slider__thumbs-item {
     height: 76px;
   }
 
   .car-slider__buttons {
-    top: 25%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
     padding-right: 15px;
     padding-left: 15px;
   }
@@ -11304,7 +11317,10 @@ ol.attention__list .attention__text::before {
   }
 
   .car-slider__buttons {
-    top: 80px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
   }
 
   .car-slider__button {
@@ -11328,11 +11344,11 @@ ol.attention__list .attention__text::before {
     margin-bottom: 10px;
   }
 
-  .car-slider__bullet {
+  .car-slider__thumbs-item {
     height: 50px;
   }
 
-  .car-slider__bullet--active::after {
+  .car-slider__thumbs-item--active::after {
     width: 30px;
   }
 
@@ -13089,6 +13105,14 @@ ol.attention__list .attention__text::before {
   .car-slider__buttons {
     padding-right: 10px;
     padding-left: 10px;
+  }
+
+  .car-slider__thumbs-item {
+    height: 89px;
+  }
+
+  .car-slider__thumbs-item--active::after {
+    width: 50px;
   }
 
   .main-single-page__attention {
