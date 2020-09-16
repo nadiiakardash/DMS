@@ -8047,6 +8047,15 @@ ol.attention__list .attention__text::before {
   background-color: #FAFAFA;
 }
 
+.personal-area__input--personal {
+  display: block;
+  margin-bottom: 5%;
+}
+
+.personal-area__input--personal:last-of-type {
+  margin-bottom: 10%;
+}
+
 .personal-area-white {
   position: relative;
   padding-bottom: 84px;
