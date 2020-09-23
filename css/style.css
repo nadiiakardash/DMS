@@ -7718,19 +7718,19 @@ ol.attention__list .attention__text::before {
 }
 
 .personal-area__car-status-item--wait {
-  background-color: #D8BAFF;
+  background-color: #D2DBF0;
 }
 
 .personal-area__car-status-item--admission {
-  background-color: #BABDFF;
+  background-color: #A1B9E7;
 }
 
 .personal-area__car-status-item--loaded {
-  background-color: #BFBFBF;
+  background-color: #D2D2D2;
 }
 
 .personal-area__car-status-item--delivered {
-  background-color: #BCF7A0;
+  background-color: #A6D69E;
 }
 
 .personal-area__car-status-item--document {
