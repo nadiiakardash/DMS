@@ -11623,13 +11623,14 @@ ol.attention__list .attention__text::before {
 }
 
 @media (max-width: 767px) {
-  .main-body--closed {
-    overflow: visible;
-  }
-
   .main-body--closed main,
   .main-body--closed footer {
     display: block;
+  }
+
+  .main-body--closed .header {
+    height: 100vh;
+    overflow: scroll;
   }
 
   .container-left {
@@ -12008,6 +12009,10 @@ ol.attention__list .attention__text::before {
 
   .main__container-contacts {
     padding-top: 215px;
+  }
+
+  .main__wish {
+    overflow: hidden;
   }
 
   .services::before,
